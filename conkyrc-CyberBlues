@@ -1,0 +1,49 @@
+-- vim: ts=4 sw=4 noet ai cindent syntax=lua
+
+conky.config = {
+    alignment = 'bottom_middle',
+    background = true,
+	own_window_transparent = true ,
+	own_window_argb_visual = true,
+	--own_window_colour = '#79006e',
+	border_width = 1,
+    cpu_avg_samples = 2,
+	default_color = 'white',
+    default_outline_color = 'white',
+    default_shade_color = 'white',
+    draw_borders = false,
+    draw_graph_borders = true,
+    draw_outline = false,
+    draw_shades = false,
+    use_xft = true,
+    font = 'DejaVu Sans Mono:size=8',
+    gap_x = 5,
+    gap_y = 60,
+    minimum_height = 5,
+	minimum_width = 1280,
+	maximum_width = 1280,
+	maximum_height = 20,
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_stderr = false,
+    extra_newline = false,
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_type = 'panel',
+    stippled_borders = 0,
+    update_interval = 2.0,
+    uppercase = false,
+    use_spacer = 'none',
+    show_graph_scale = false,
+    show_graph_range = false,
+	gap_x = 0,
+	gap_y = 0,
+    temperature_unit = "fahrenheit",
+	short_units = true
+}
+
+conky.text = [[${alignc}${color #00ffff}${time %-I:%M%p %A, %B %d} ${color #aaaaaa}CPU ${cpubar 10,50} ${color #ff4444}RAM ${memgauge 10,25} ${memperc}% ${color #008b8b}DISKIO ${diskiograph 10,25 aaaaaa 00ffff -t} ${color #ff9900}Load ${loadgraph 10,25 #aaaaa #ff9900 -t} ${loadavg 1} ${color #0099ff}Battery ${battery_percent}% ${color #008b8b}theHD:${fs_free /} ${color #2E8B57}Q-DATA:${fs_free /media/wardbones/Q-DATA} ${color #ffffff} Down ${downspeedf wlp3s0}K | Up ${upspeedf  wlp3s0}K ${color #00ffff}CoreTemp:${acpitemp}F | ${color #00ff00}${execi 3000 weather ksan > ~/ksan.txt && grep Temperature ~/ksan.txt | tr -d "Temperature","\ ",":" }
+]]
+
+
